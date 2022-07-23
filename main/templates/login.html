@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login | Best To Specialist{% endblock title %}
+
+
+
+{% block slider %}
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2> <span style="color:#ef6603"> Welcome </span> For Login<span style="color:#ef6603"> <span> In  Best To Specilist</h2>
+                    </div>
+            </div>
+        </div>
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+                <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+            </g>
+            <g class="wave2">
+                <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+        </svg>
+    </section>
+{% endblock slider %}
+
+{% block main_content %}
+    <main id="main">
+        <section id="registration" class="registration">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Sign IN</h2>
+                    <p>Login into your account</p>
+                </div>
+                <form class="form-signin" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="{{errorclass}}" role="alert">{{message}}</div>
+                    
+                    <div class="form-group">
+                        <label for="inputUsername" class="sr-only">Username</label>
+                        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="" name="username">
+                        <div class="validate"></div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autofocus="" name="password">
+                        <div class="validate"></div>
+                        <div class="text-center" style="margin-top:20px">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" id="XYZ">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- whatsapp button -->
+        <section class="call-buton">
+            <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <a  href="https://api.whatsapp.com/send?phone=+923066895313&text=Assalam O Alaikum Welcome%20to Best of Solution%20." class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i></a>
+        </section>
+        <!-- Whatsapp button end -->
+        <!-- call button -->
+        <section class="call-buton"><a class="cc-calto-action-ripple" href="tel:+923183340180"><i class="fa fa-phone"></i></a></section>
+        <!-- call button end -->
+    </main>
+{% endblock main_content %}
+
+
+

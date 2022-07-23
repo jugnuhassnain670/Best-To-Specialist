@@ -1,0 +1,160 @@
+{% load static %} 
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon">-->
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css ' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/line-awesome/css/line-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet"> </head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center">
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="{% url 'index' %}">Best To Specilist</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>--></div>
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="drop-down"><a href="#about">Service</a>
+                        <ul>
+                            <li><a href="{% url 'ambulanceserviceinlahore' %}">ambulance in Lahore </a></li>
+                            <li><a href="{% url 'acservice' %}">AC Service</a></li>
+                            <li><a href="{% url 'actechnicianservice' %}">AC Technician Service</a></li>
+                            <li><a href="{% url 'carpenteryservice' %}">Carpentey Service</a></li>
+                            <li><a href="{% url 'electricalservice' %}">Electrical Service</a></li>
+                            <li><a href="{% url 'gardeningservice' %}">Gardening Service</a></li>
+                            <li><a href="{% url 'generatorservice' %}">Generator Service</a></li>
+                            <li><a href="{% url 'plumbingservice' %}">Plumbing Service</a></li>
+                           <li><a href="{% url 'paintservice' %}">Panit Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="#Premium">Premium Services</a>
+                        <ul>
+                            <li><a href="heatproofing.html">Heat Proofing </a></li>
+                            <li><a href="waterproofing.html">Water Proofing</a></li>
+                            <li><a href="depoxyflooring.html">3D Epoxy Flooring</a></li>
+                            <li><a href="epoxyflooring.html">Epoxy Flooring</a></li>
+                            <li><a href="falseceiling.html">False Ceiling</a></li>
+                            <li><a href="graphiccoating.html">Graphic Coating</a></li>
+                            <li><a href="exteriorninterior.html">Exterior n Interior</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="#ADDON">Addon Services</a>
+                        <ul>
+                            <li><a href="carpetceiling.html">Carpet Cleaning </a></li>
+                            <li><a href="watertankcleaning.html">Water Tank Cleaning</a></li>
+                            <li><a href="surveillancesystem.html">Surveillance System</a></li>
+                            <li><a href="sofacleaning.html">Sofa Cleaning</a></li>
+                            <li><a href="flooringsolutions.html">Flooring Solutions</a></li>
+                            <li><a href="glazingservices.html">Glazing Services</a></li>
+                            <li><a href="pabxsystem.html">PABX System</a></li>
+                            <li><a href="fumigationservices.html">Fumigation Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="#AUTOMOTIVE">Automotive Serivces</a>
+                        <ul>
+                            <li><a href="batteryreplacement.html">Battery Replacement</a></li>
+                            <li><a href="brakerepairreplacement.html">Brake Repair & Replacement</a></li>
+                            <li><a href="cardetailing.html">Car Detailing</a></li>
+                            <li><a href="headlightrepair.html">Headlight Repair </a></li>
+                            <li><a href="oilchange.html">Oil Change</a></li>
+                            <li><a href="carwash.html">Car Wash</a></li>
+                            <li><a href="glasscoatingservices.html">Glass Coating Service</a></li>
+                        </ul>
+                    </li>
+                    {% comment %} <li><a href="{% url 'register' %}">Registration</a></li>  {% endcomment %}
+                    {% if request.user.is_authenticated %}
+                        <li  class="drop-down"><a class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                            href="#"
+                            id="navbarDropdownMenuAvatar"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"><img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            class="rounded-circle"
+                            height="25"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                        /></a>
+                            <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                            </ul>
+                        </li> 
+                    {% else %} 
+                        <li  class="drop-down"><a href="#">Login/SignUp</a>
+                            <ul>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                <li><a href="{% url 'register' %}">SignUp</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+                     
+                     
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+        </div>
+    </header>
+    <!-- End Header -->
+    {% block slider %}{% endblock slider %}
+    {% block main_content %}{% endblock main_content %}
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>About Us
+            </h3>
+            <p> Supportive managers, fun faced paced environment. Be prepared to work hard but the benefits are extremely rewarding. Highly recommended if you are passionate about people. </p>
+            <div class="social-links"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+            <div class="copyright"> &copy; Copyright © 2022 <strong><span>Best To Specilist</span></strong>. All Rights Reserved </div>
+            <div class="credits"> Designed by: Best To Specilist<a href=""> Solution Expert</a> </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html> 
