@@ -18,4 +18,25 @@ urlpatterns = [
     path('paintservice/', views.paintservice, name='paintservice'),
     # End of services 
     
+    #premium services start
+    path('heatproofing/', views.heatproofing, name='heatproofing'),
+    path('waterproofing/', views.waterproofing, name='waterproofing'),
+    path('depoxyflooring/', views.depoxyflooring, name='depoxyflooring'),
+    path('epoxyflooring/', views.epoxyflooring, name='epoxyflooring'),
+    path('falseceiling/', views.falseceiling, name='falseceiling'),
+    path('graphiccoating/', views.graphiccoating, name='graphiccoating'),
+    path('exteriorninterior/', views.exteriorninterior, name='exteriorninterior'),
+    #premium services end
+    
+    #Addon service start
+    path('carpetceiling/', views.carpetceiling, name='carpetceiling'),
+    path('watertankcleaning/', views.watertankcleaning, name='watertankcleaning'),
+    path('surveillancesystem/', views.surveillancesystem, name='surveillancesystem'),
+    path('sofacleaning/', views.sofacleaning, name='sofacleaning'),
+    path('flooringsolutions/', views.flooringsolutions, name='flooringsolutions'),
+    path('glazingservices/', views.glazingservices, name='glazingservices'),
+    path('pabxsystem/', views.pabxsystem, name='pabxsystem'),
+    path('fumigationservices/', views.fumigationservices, name='fumigationservices'),
+    #Addon service end
+    
 ]

@@ -16,6 +16,36 @@ from .models import Plantservice
 from .models import Masonservice
 
 
+#premium
+from .models import Heatproofing
+from .models import Waterproofing
+from .models import Depoxyflooring
+from .models import Epoxyflooring
+from .models import Falseceiling
+from .models import Graphiccoating
+from .models import Exteriorninterior
+
+
+#addon
+from .models import Carpetceiling
+from .models import Watertankcleaning
+from .models import Surveillancesystem
+from .models import Sofacleaning
+from .models import Flooringsolutions
+from .models import Glazingservices
+from .models import Pabxsystem
+from .models import Fumigationservices
+
+#automotive
+from .models import Batteryreplacement
+from .models import Brakerepairreplacement
+from .models import Cardetailing
+from .models import Headlightrepair
+from .models import Oilchange
+from .models import Carwash
+from .models import Glasscoatingservices
+
+
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
@@ -244,3 +274,229 @@ def masonservice(request):
 		masonservice.Message=Message
 		masonservice.save()
 	return render(request,'masonservice.html')
+
+
+
+
+
+
+#premium services start
+def heatproofing(request):
+	if request.method == "POST":
+		heatproofing=Heatproofing()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		heatproofing.Name=Name
+		heatproofing.Email=Email
+		heatproofing.Phoneno=Phoneno
+		heatproofing.Message=Message
+		heatproofing.save()
+	return render(request,'heatproofing.html')
+
+def waterproofing(request):
+	if request.method == "POST":
+		waterproofing=Waterproofing()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		waterproofing.Name=Name
+		waterproofing.Email=Email
+		waterproofing.Phoneno=Phoneno
+		waterproofing.Message=Message
+		waterproofing.save()
+	return render(request,'waterproofing.html') \
+
+
+def depoxyflooring(request):
+	if request.method == "POST":
+		depoxyflooring=Depoxyflooring()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		depoxyflooring.Name=Name
+		depoxyflooring.Email=Email
+		depoxyflooring.Phoneno=Phoneno
+		depoxyflooring.Message=Message
+		depoxyflooring.save()
+	return render(request,'depoxyflooring.html') 
+
+def epoxyflooring(request):
+	if request.method == "POST":
+		epoxyflooring=Epoxyflooring()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		epoxyflooring.Name=Name
+		epoxyflooring.Email=Email
+		epoxyflooring.Phoneno=Phoneno
+		epoxyflooring.Message=Message
+		epoxyflooring.save()
+	return render(request,'epoxyflooring.html') 
+
+
+def falseceiling(request):
+	if request.method == "POST":
+		falseceiling=Falseceiling()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		falseceiling.Name=Name
+		falseceiling.Email=Email
+		falseceiling.Phoneno=Phoneno
+		falseceiling.Message=Message
+		falseceiling.save()
+	return render(request,'falseceiling.html') 
+
+def graphiccoating(request):
+	if request.method == "POST":
+		graphiccoating=Graphiccoating()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		graphiccoating.Name=Name
+		graphiccoating.Email=Email
+		graphiccoating.Phoneno=Phoneno
+		graphiccoating.Message=Message
+		graphiccoating.save()
+	return render(request,'graphiccoating.html') 
+
+def exteriorninterior(request):
+	if request.method == "POST":
+		exteriorninterior=Exteriorninterior()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		exteriorninterior.Name=Name
+		exteriorninterior.Email=Email
+		exteriorninterior.Phoneno=Phoneno
+		exteriorninterior.Message=Message
+		exteriorninterior.save()
+	return render(request,'exteriorninterior.html') 
+
+
+#premium services end
+
+
+#Addon services Start
+def carpetceiling(request):
+	if request.method == "POST":
+		carpetceiling=Carpetceiling()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		carpetceiling.Name=Name
+		carpetceiling.Email=Email
+		carpetceiling.Phoneno=Phoneno
+		carpetceiling.Message=Message
+		carpetceiling.save()
+	return render(request,'carpetceiling.html') 
+
+def watertankcleaning(request):
+	if request.method == "POST":
+		watertankcleaning=Watertankcleaning()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		watertankcleaning.Name=Name
+		watertankcleaning.Email=Email
+		watertankcleaning.Phoneno=Phoneno
+		watertankcleaning.Message=Message
+		watertankcleaning.save()
+	return render(request,'watertankcleaning.html') 
+
+def surveillancesystem(request):
+	if request.method == "POST":
+		surveillancesystem=Surveillancesystem()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		surveillancesystem.Name=Name
+		surveillancesystem.Email=Email
+		surveillancesystem.Phoneno=Phoneno
+		surveillancesystem.Message=Message
+		surveillancesystem.save()
+	return render(request,'surveillancesystem.html') 
+
+def sofacleaning(request):
+	if request.method == "POST":
+		sofacleaning=Sofacleaning()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		sofacleaning.Name=Name
+		sofacleaning.Email=Email
+		sofacleaning.Phoneno=Phoneno
+		sofacleaning.Message=Message
+		sofacleaning.save()
+	return render(request,'sofacleaning.html') 
+
+def flooringsolutions(request):
+	if request.method == "POST":
+		flooringsolutions=Flooringsolutions()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		flooringsolutions.Name=Name
+		flooringsolutions.Email=Email
+		flooringsolutions.Phoneno=Phoneno
+		flooringsolutions.Message=Message
+		flooringsolutions.save()
+	return render(request,'flooringsolutions.html')
+
+
+def glazingservices(request):
+	if request.method == "POST":
+		glazingservices=Glazingservices()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		glazingservices.Name=Name
+		glazingservices.Email=Email
+		glazingservices.Phoneno=Phoneno
+		glazingservices.Message=Message
+		glazingservices.save()
+	return render(request,'glazingservices.html') 
+
+def pabxsystem(request):
+	if request.method == "POST":
+		pabxsystem=Pabxsystem()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		pabxsystem.Name=Name
+		pabxsystem.Email=Email
+		pabxsystem.Phoneno=Phoneno
+		pabxsystem.Message=Message
+		pabxsystem.save()
+	return render(request,'pabxsystem.html') 
+
+def fumigationservices(request):
+	if request.method == "POST":
+		fumigationservices=Fumigationservices()
+		Name=request.POST.get('Name')
+		Email=request.POST.get('Email')
+		Phoneno=request.POST.get('Phoneno')
+		Message=request.POST.get('Message')
+		fumigationservices.Name=Name
+		fumigationservices.Email=Email
+		fumigationservices.Phoneno=Phoneno
+		fumigationservices.Message=Message
+		fumigationservices.save()
+	return render(request,'fumigationservices.html') 
+
+#Addon services end
